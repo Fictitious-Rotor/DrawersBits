@@ -8,7 +8,6 @@ import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IProtectable;
 import com.jaquadro.minecraft.storagedrawers.api.storage.attribute.IVoidable;
 import com.jaquadro.minecraft.storagedrawers.block.tile.TileEntityController;
 import com.jaquadro.minecraft.storagedrawers.security.SecurityManager;
-import com.jaquadro.minecraft.storagedrawers.util.ItemMetaListRegistry;
 import com.mojang.authlib.GameProfile;
 import mod.chiselsandbits.api.*;
 import mod.chiselsandbits.core.api.BitAccess;

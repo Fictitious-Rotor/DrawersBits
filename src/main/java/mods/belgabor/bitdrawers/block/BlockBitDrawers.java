@@ -1,6 +1,7 @@
 package mods.belgabor.bitdrawers.block;
 
 import com.jaquadro.minecraft.storagedrawers.api.pack.BlockType;
+import com.jaquadro.minecraft.storagedrawers.api.storage.BlockType;
 import com.jaquadro.minecraft.storagedrawers.api.storage.IDrawer;
 import com.jaquadro.minecraft.storagedrawers.api.storage.INetworked;
 import com.jaquadro.minecraft.storagedrawers.block.BlockDrawers;
@@ -126,7 +127,7 @@ public class BlockBitDrawers extends BlockDrawers implements INetworked
     }
 
     @Override
-    public void getSubBlocks (Item item, CreativeTabs creativeTabs, NonNullList<ItemStack> list) {
+    public void getSubBlocks(Item item, CreativeTabs creativeTabs, NonNullList<ItemStack> list) {
         list.add(new ItemStack(item, 1, 0));
     }
 
@@ -198,9 +199,9 @@ public class BlockBitDrawers extends BlockDrawers implements INetworked
         
         EnumFacing side = rayResult.sideHit;
         // adjust hitVec for drawers
-        float hitX = (float)(rayResult.hitVec.xCoord - pos.getX());
-        float hitY = (float)(rayResult.hitVec.yCoord - pos.getY());
-        float hitZ = (float)(rayResult.hitVec.zCoord - pos.getZ());
+        float hitX = (float)(rayResult.hitVec.x - pos.getX());
+        float hitY = (float)(rayResult.hitVec.y - pos.getY());
+        float hitZ = (float)(rayResult.hitVec.z - pos.getZ());
         
         TileEntityDrawers tileDrawers = getTileEntitySafe(world, pos);
         if (tileDrawers.getDirection() != side.ordinal())
